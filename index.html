@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" class="theme-dark">
 <head>
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,6 +49,14 @@ body {
   font-weight: lighter;
 }
 
+.theme-light {
+  --font-color: #F8E9DD      
+}
+  
+.theme-dark {
+  --font-color: #121212      
+}
+  
 #myVideo {
   position: fixed;
   right: 0;
@@ -62,7 +70,7 @@ body {
   right: 5%;
   bottom: 0;
   background: rgba(0, 0, 0, 0);
-  color: rgba(248, 233, 221, 1);
+  color: var(--font-color);
   width: auto;
   padding: 20px;
 }
@@ -109,6 +117,23 @@ function myFunction() {
     btn.innerHTML = "Play";
   }
 }
+  
+function setTheme(themeName) {
+    localStorage.setItem('theme', themeName);
+    document.documentElement.className = themeName;
+}
+  
+(function () {
+   var element = document.body;
+   const hours = new Date().getHours()
+   const isDayTime = hours > 6 && hours < 20
+    if (isDayTime) {
+        setTheme('theme-light');
+    } else {
+        setTheme('theme-dark');
+    }
+})();
+  
 </script>
 
   
