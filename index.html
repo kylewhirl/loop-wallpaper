@@ -38,7 +38,7 @@ body {
 
 .content {
   position: fixed;
-  left: 0;
+  right: 10%;
   bottom: 0;
   background: rgba(0, 0, 0, 0);
   color: #f1f1f1;
@@ -63,7 +63,9 @@ body {
 </style>
 </head>
 
-<body>
+<body onload=display_ct();>
+ <span id='ct' ></span>
+  
 <video autoplay muted loop id="myVideo">
   <source src="loop-wallpaper.mp4" type="video/mp4">
   Your browser does not support HTML5 video.
