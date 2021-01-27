@@ -3,6 +3,19 @@
 <head>
   
 <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script type="text/javascript"> 
+ function display_c(){
+ var refresh=1000; // Refresh rate in milli seconds
+ mytime=setTimeout('display_ct()',refresh)
+ }
+
+ function display_ct() {
+ var x = new Date()
+ document.getElementById('ct').innerHTML = x;
+ display_c();
+  }
+ </script>
 
 <style>
 * {
@@ -25,11 +38,11 @@ body {
 
 .content {
   position: fixed;
-  right: 50%;
-  top: 0;
+  left: 0;
+  bottom: 0;
   background: rgba(0, 0, 0, 0);
   color: #f1f1f1;
-  width: 200px;
+  width: auto;
   padding: 20px;
 }
 
