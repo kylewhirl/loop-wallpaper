@@ -2,8 +2,8 @@
   "short_name": "Wallpaper",
   "name": "Loop Wallpaper",
   "start_url": "https://www.kylewhirl.com/loop-wallpaper",
-  "background_color": "#000000",
-  "display": "standalone",
-  "theme_color": "#000000",
+  "background_color": "#2e4464",
+  "display": "fullscreen",
+  "theme_color": "#2e4464",
   "description": "A rocket screen saver"
 }
